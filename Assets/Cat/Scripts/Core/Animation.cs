@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public class Animation : MonoBehaviour
 {
-    private readonly string X_VELOCITY = "xVelocity";
+    private readonly string Y_VELOCITY = "yVelocity";
 
     private Animator _animator;
 
@@ -11,5 +11,5 @@ public class Animation : MonoBehaviour
 
     public void SetBoolVariable(string animationBoolName, bool value) => _animator.SetBool(animationBoolName, value);
 
-    public void SetVelocityVariable(float xVelocity) => _animator.SetFloat(X_VELOCITY, xVelocity);
+    public void SetVelocityVariable(float xVelocity) => _animator.SetFloat(Y_VELOCITY, xVelocity);
 }

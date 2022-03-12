@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
     private Rigidbody2D _myRigidbody;
@@ -22,6 +21,17 @@ public class Movement : MonoBehaviour
     public void SetVelocityX(float velocityX)
     {
         _workspace.Set(velocityX, CurrentVelocity.y);
+        SetFinalVelocity();
+    }
+
+    public void SetVelocityZero()
+    {
+        _workspace.Set(0.0f, 0.0f);
+        SetFinalVelocity();
+    }
+
+    public void SetFinalVelocity()
+    {
         _myRigidbody.velocity = _workspace;
         CurrentVelocity = _workspace;
     }
