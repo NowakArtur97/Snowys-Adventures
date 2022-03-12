@@ -47,3 +47,6 @@ TagManager:
   - name: Furniture
     uniqueID: 2685741253
     locked: 0
+  - name: Cat
+    uniqueID: 322536723
+    locked: 0
