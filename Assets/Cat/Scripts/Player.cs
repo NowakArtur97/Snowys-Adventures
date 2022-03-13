@@ -9,12 +9,6 @@ public class Player : MonoBehaviour
         get => _moveVelocity;
         private set => _moveVelocity = value;
     }
-    [SerializeField] private float _inAirMoveVelocity = 4.0f;
-    public float InAirMoveVelocity
-    {
-        get => _inAirMoveVelocity;
-        private set => _inAirMoveVelocity = value;
-    }
     [SerializeField] private float _jumpVelocity = 10.0f;
     public float JumpVelocity
     {

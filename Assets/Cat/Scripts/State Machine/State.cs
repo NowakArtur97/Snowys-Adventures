@@ -7,6 +7,7 @@ public class State
 
     protected bool IsExitingState { get; private set; }
     protected bool IsAnimationFinished { get; private set; }
+    protected float StateStartTime { get; private set; }
 
     private List<string> _animationBoolNames;
     private string _animationBoolName;
@@ -21,6 +22,7 @@ public class State
     {
         IsExitingState = false;
         IsAnimationFinished = false;
+        StateStartTime = Time.time;
 
         Player.CoreContainer.AnimationToStateMachine.CurrentState = this;
 

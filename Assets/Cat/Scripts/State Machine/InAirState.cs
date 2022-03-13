@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class InAirState : State
 {
-    protected bool IsGrounded { get; private set; }
-    protected float XMovementInput { get; private set; }
-    protected bool JumpInput { get; private set; }
+    private readonly float WAIT_FOR_JUMP_TIME = 1f;
+
+    private bool _isGrounded;
+    private Vector2 _currentVelocity;
+    private float _xMovementInput;
+    private bool _jumpInput;
 
     public InAirState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
@@ -13,21 +16,21 @@ public class InAirState : State
     {
         base.LogicUpdate();
 
-        XMovementInput = Player.CoreContainer.Input.MovementInput.x;
-        JumpInput = Player.CoreContainer.Input.JumpInput;
+        _xMovementInput = Player.CoreContainer.Input.MovementInput.x;
+        _jumpInput = Player.CoreContainer.Input.JumpInput;
+        _currentVelocity = Player.CoreContainer.Movement.CurrentVelocity;
 
         Player.CoreContainer.Movement.CheckIfShouldFlip((int)Player.CoreContainer.Input.MovementInput.x);
-        Player.CoreContainer.Movement.SetVelocityX(Player.InAirMoveVelocity * XMovementInput);
-        Player.CoreContainer.Animation.SetYVelocityVariable(Player.CoreContainer.Movement.CurrentVelocity.y);
-        Debug.Log(Player.CoreContainer.Movement.CurrentVelocity.y);
+        Player.CoreContainer.Movement.SetVelocityX(Player.MoveVelocity * _xMovementInput);
+        Player.CoreContainer.Animation.SetYVelocityVariable(_currentVelocity.y);
 
-        if (!IsExitingState && IsGrounded)
+        if (!IsExitingState)
         {
-            if (JumpInput)
+            if (_isGrounded && _jumpInput)
             {
                 Player.StateMachine.ChangeState(Player.JumpState);
             }
-            else if (Player.CoreContainer.Movement.CurrentVelocity.y < 0.01f)
+            else if (_isGrounded && _currentVelocity.y < 0.01f && !_jumpInput)
             {
                 Player.StateMachine.ChangeState(Player.LandState);
             }
@@ -38,6 +41,6 @@ public class InAirState : State
     {
         base.DoChecks();
 
-        IsGrounded = Player.CoreContainer.CollisionSenses.IsGrounded;
+        _isGrounded = Player.CoreContainer.CollisionSenses.IsGrounded;
     }
 }

@@ -13,11 +13,11 @@ public abstract class AbilityState : State
 
         if (!IsExitingState && IsAbilityFinished)
         {
-            if (IsGrounded)
+            if (IsGrounded && Player.CoreContainer.Movement.CurrentVelocity.y < 0.01)
             {
                 Player.StateMachine.ChangeState(Player.IdleState);
             }
-            else
+            else if (!IsGrounded)
             {
                 Player.StateMachine.ChangeState(Player.InAirState);
             }
