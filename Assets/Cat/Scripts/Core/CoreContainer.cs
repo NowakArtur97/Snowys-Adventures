@@ -10,6 +10,14 @@ public class CoreContainer : MonoBehaviour
         private set => _animation = value;
     }
 
+    private AnimationToStateMachine _animationToStateMachine;
+
+    public AnimationToStateMachine AnimationToStateMachine
+    {
+        get => GenericUtil<AnimationToStateMachine>.GetOrDefault(_animationToStateMachine, transform.parent.name);
+        private set => _animationToStateMachine = value;
+    }
+
     private Input _input;
 
     public Input Input
@@ -37,6 +45,7 @@ public class CoreContainer : MonoBehaviour
     private void Awake()
     {
         Animation = GetComponentInChildren<Animation>();
+        AnimationToStateMachine = GetComponentInChildren<AnimationToStateMachine>();
         Input = GetComponentInChildren<Input>();
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();

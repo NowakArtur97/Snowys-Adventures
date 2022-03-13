@@ -22,10 +22,9 @@ public class State
         IsExitingState = false;
         IsAnimationFinished = false;
 
-        //Player.CoreContainer.AnimationToStateMachine.CurrentState = this;
+        Player.CoreContainer.AnimationToStateMachine.CurrentState = this;
 
         _animationBoolName = GetRandomAnimation();
-        Debug.Log(_animationBoolName);
         Player.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 
         DoChecks();

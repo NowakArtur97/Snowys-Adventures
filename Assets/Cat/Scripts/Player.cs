@@ -3,11 +3,23 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private float _moveVelocity;
+    [SerializeField] private float _moveVelocity = 8.0f;
     public float MoveVelocity
     {
         get => _moveVelocity;
         private set => _moveVelocity = value;
+    }
+    [SerializeField] private float _inAirMoveVelocity = 4.0f;
+    public float InAirMoveVelocity
+    {
+        get => _inAirMoveVelocity;
+        private set => _inAirMoveVelocity = value;
+    }
+    [SerializeField] private float _jumpVelocity = 10.0f;
+    public float JumpVelocity
+    {
+        get => _jumpVelocity;
+        private set => _jumpVelocity = value;
     }
 
     public CoreContainer CoreContainer { get; internal set; }
@@ -16,6 +28,9 @@ public class Player : MonoBehaviour
 
     public IdleState IdleState { get; private set; }
     public MoveState MoveState { get; private set; }
+    public JumpState JumpState { get; private set; }
+    public InAirState InAirState { get; private set; }
+    public LandState LandState { get; private set; }
 
     private void Awake()
     {
@@ -23,6 +38,9 @@ public class Player : MonoBehaviour
 
         IdleState = new IdleState(this, new List<string>() { "idle1", "idle2", "idle3", "idle4" });
         MoveState = new MoveState(this, new List<string>() { "move" });
+        JumpState = new JumpState(this, new List<string>() { "inAir" });
+        InAirState = new InAirState(this, new List<string>() { "inAir" });
+        LandState = new LandState(this, new List<string>() { "land" });
     }
 
     private void Start() => StateMachine = new FiniteStateMachine(IdleState);

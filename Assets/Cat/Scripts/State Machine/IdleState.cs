@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class IdleState : GroundedState
 {
-    public IdleState(Player entity, List<string> animationBoolNames) : base(entity, animationBoolNames) { }
+    public IdleState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
     public override void Enter()
     {
@@ -17,7 +17,11 @@ public class IdleState : GroundedState
 
         if (!IsExitingState)
         {
-            if (Player.CoreContainer.Input.Movement.x != 0)
+            if (Player.CoreContainer.Input.JumpInput)
+            {
+                Player.StateMachine.ChangeState(Player.JumpState);
+            }
+            else if (Player.CoreContainer.Input.MovementInput.x != 0)
             {
                 Player.StateMachine.ChangeState(Player.MoveState);
             }

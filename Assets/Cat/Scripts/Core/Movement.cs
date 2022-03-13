@@ -18,15 +18,21 @@ public class Movement : MonoBehaviour
 
     private void Update() => CurrentVelocity = _myRigidbody.velocity;
 
-    public void SetVelocityX(float velocityX)
-    {
-        _workspace.Set(velocityX, CurrentVelocity.y);
-        SetFinalVelocity();
-    }
-
     public void SetVelocityZero()
     {
         _workspace.Set(0.0f, 0.0f);
+        SetFinalVelocity();
+    }
+
+    public void SetVelocityX(float velocityX)
+    {
+        _workspace.Set(velocityX, _myRigidbody.velocity.y);
+        SetFinalVelocity();
+    }
+
+    public void SetVelocityY(float velocityY)
+    {
+        _workspace.Set(CurrentVelocity.x, velocityY);
         SetFinalVelocity();
     }
 

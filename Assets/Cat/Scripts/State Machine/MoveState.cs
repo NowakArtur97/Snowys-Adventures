@@ -2,22 +2,26 @@ using System.Collections.Generic;
 
 public class MoveState : GroundedState
 {
-    private float _xMovementInput;
-
-    public MoveState(Player entity, List<string> animationBoolNames) : base(entity, animationBoolNames) { }
+    public MoveState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
-        _xMovementInput = Player.CoreContainer.Input.Movement.x;
-
-        Player.CoreContainer.Movement.CheckIfShouldFlip((int)_xMovementInput);
-        Player.CoreContainer.Movement.SetVelocityX(Player.MoveVelocity * _xMovementInput);
+        Player.CoreContainer.Movement.CheckIfShouldFlip((int)XMovementInput);
+        Player.CoreContainer.Movement.SetVelocityX(Player.MoveVelocity * XMovementInput);
 
         if (!IsExitingState)
         {
-            if (_xMovementInput == 0)
+            if (JumpInput)
+            {
+                Player.StateMachine.ChangeState(Player.JumpState);
+            }
+            else if (!IsGrounded)
+            {
+                Player.StateMachine.ChangeState(Player.InAirState);
+            }
+            else if (XMovementInput == 0)
             {
                 Player.StateMachine.ChangeState(Player.IdleState);
             }

@@ -11,5 +11,5 @@ public class Animation : MonoBehaviour
 
     public void SetBoolVariable(string animationBoolName, bool value) => _animator.SetBool(animationBoolName, value);
 
-    public void SetVelocityVariable(float xVelocity) => _animator.SetFloat(Y_VELOCITY, xVelocity);
+    public void SetYVelocityVariable(float yVelocity) => _animator.SetFloat(Y_VELOCITY, yVelocity);
 }
