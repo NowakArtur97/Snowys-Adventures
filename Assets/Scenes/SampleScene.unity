@@ -1913,6 +1913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 0
+  _intensityOn: 0.7
+  _intensityOff: 0
   _lightSwitchOn: {fileID: 582671577}
   _lightSwitchOff: {fileID: 818876959}
 --- !u!1 &782789549
@@ -1928,7 +1930,7 @@ GameObject:
   - component: {fileID: 782789552}
   - component: {fileID: 782789551}
   m_Layer: 0
-  m_Name: Lamp 2
+  m_Name: Standing Lamp 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2054,10 +2056,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 782789549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8091f754c3595419875a00e43290db, type: 3}
+  m_Script: {fileID: 11500000, guid: 67634f2afaf57bd4984a6b1697b1670a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 1
+  _intensityOn: 0.7
+  _intensityOff: 0
   _wireEnd: {fileID: 1005428430}
   _electricalContactPostion: {fileID: 2088408487}
   _plugOutPostion: {fileID: 1293013214}
@@ -2550,7 +2554,7 @@ GameObject:
   - component: {fileID: 914638530}
   - component: {fileID: 914638531}
   m_Layer: 0
-  m_Name: Lamp
+  m_Name: Standing Lamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2681,10 +2685,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 914638528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d8091f754c3595419875a00e43290db, type: 3}
+  m_Script: {fileID: 11500000, guid: 67634f2afaf57bd4984a6b1697b1670a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 0
+  _intensityOn: 0.7
+  _intensityOff: 0
   _wireEnd: {fileID: 1959017162}
   _electricalContactPostion: {fileID: 1498425576}
   _plugOutPostion: {fileID: 1611158221}
