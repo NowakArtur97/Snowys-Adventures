@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cb11e7d9c52815a013853913
+  m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: 97363729}
   - component: {fileID: 97363731}
   - component: {fileID: 97363730}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Left Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -900,17 +900,17 @@ MonoBehaviour:
   _groundCheckRadius: 0.1
   _whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 320
   _plugInCheck: {fileID: 668031874}
   _plugInCheckRadius: 1
   _whatIsPlugableIn:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 512
   _plugOutCheck: {fileID: 1451395298}
   _plugOutCheckRadius: 1
   _whatIsPlugableOut:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1024
 --- !u!1 &280323046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1218,7 +1218,7 @@ GameObject:
   - component: {fileID: 440142121}
   - component: {fileID: 440142120}
   - component: {fileID: 440142123}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1326,7 +1326,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_Sprite: {fileID: -1680759896, guid: 239de762edfbb314e8cf2a80589b2272, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1459,7 +1459,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 534485994}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Furniture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2069,7 +2069,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -277552646, guid: f085cd502a4aca842ba59449c624ae41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2195,7 +2195,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1306310078, guid: f085cd502a4aca842ba59449c624ae41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2342,7 +2342,7 @@ GameObject:
   - component: {fileID: 792944324}
   - component: {fileID: 792944326}
   - component: {fileID: 792944325}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Right Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,6 +2418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 914638529}
+  - component: {fileID: 914638532}
   - component: {fileID: 914638530}
   - component: {fileID: 914638531}
   m_Layer: 0
@@ -2443,6 +2444,7 @@ Transform:
   - {fileID: 2104255350}
   - {fileID: 1498425576}
   - {fileID: 1364408141}
+  - {fileID: 1611158221}
   m_Father: {fileID: 341895378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2485,7 +2487,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 257610939, guid: f085cd502a4aca842ba59449c624ae41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2542,6 +2544,22 @@ MonoBehaviour:
   m_ShapePathHash: 172577175
   m_Mesh: {fileID: 347786037}
   m_InstanceId: 28170
+--- !u!114 &914638532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914638528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d8091f754c3595419875a00e43290db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startingState: 0
+  _wireEnd: {fileID: 1959017162}
+  _electricalContactPostion: {fileID: 1498425576}
+  _plugOutPostion: {fileID: 1611158221}
 --- !u!1 &940640690
 GameObject:
   m_ObjectHideFlags: 0
@@ -2555,7 +2573,7 @@ GameObject:
   - component: {fileID: 940640693}
   - component: {fileID: 940640694}
   - component: {fileID: 940640695}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: TV Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2616,7 +2634,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -2036234618, guid: 239de762edfbb314e8cf2a80589b2272, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4809,9 +4827,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1137520657}
   m_Layer: 0
-  m_Name: Electric Device Position
+  m_Name: Wire Start Position
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4841,7 +4859,7 @@ GameObject:
   - component: {fileID: 1152318315}
   - component: {fileID: 1152318316}
   - component: {fileID: 1152318317}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4906,7 +4924,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 779994344, guid: 239de762edfbb314e8cf2a80589b2272, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5006,7 +5024,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 322536723
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ab9fa176ce2c32c469118797658da81a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5143,7 +5161,7 @@ LineRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1780604751
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
@@ -5215,8 +5233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 128a5523ec75c264ab508fd87751d526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _electricDevicePosition: {fileID: 1137520657}
-  _electricContactPosition: {fileID: 1959017163}
+  _wireStartPosition: {fileID: 1137520657}
+  _wireEndPosition: {fileID: 1959017163}
   _wireSegmentLength: 0.2
   _wireLength: 17
   _wireWidth: 0.1
@@ -5233,7 +5251,7 @@ GameObject:
   - component: {fileID: 1426776225}
   - component: {fileID: 1426776227}
   - component: {fileID: 1426776226}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Upper Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5383,7 +5401,7 @@ MonoBehaviour:
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cb11e7d9c52815a013853913
+  m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5452,10 +5470,10 @@ GameObject:
   - component: {fileID: 1498425576}
   - component: {fileID: 1498425577}
   - component: {fileID: 1498425578}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Electrical Contact
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5512,8 +5530,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1609226043
-  m_SortingLayer: 3
+  m_SortingLayerID: -913439743
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 968285923, guid: f085cd502a4aca842ba59449c624ae41, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5653,7 +5671,7 @@ MonoBehaviour:
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cb11e7d9c52815a013853913
+  m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -5804,6 +5822,64 @@ MonoBehaviour:
   - {x: 0.34049463, y: 0.08442068, z: 0}
   - {x: 18.14, y: 21.67, z: 0}
   - {x: -17.86, y: 21.67, z: 0}
+--- !u!1 &1611158220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611158221}
+  - component: {fileID: 1611158222}
+  m_Layer: 9
+  m_Name: Plug Out Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611158221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611158220}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9899998, y: 0.164, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 914638529}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1611158222
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611158220}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.3125, y: 0.3125}
+    newSize: {x: 0.3125, y: 0.3125}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.15829252, y: 0.1271663}
+  m_EdgeRadius: 0
 --- !u!1 &1711597365
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,7 +5954,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 322536723
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 302002390, guid: 5446282215df61c4a9c8ea4856206b7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5946,7 +6022,7 @@ GameObject:
   - component: {fileID: 1736801074}
   - component: {fileID: 1736801076}
   - component: {fileID: 1736801075}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Bottom Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6557,7 +6633,7 @@ MonoBehaviour:
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cb11e7d9c52815a013853913
+  m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -6717,11 +6793,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1959017163}
-  - component: {fileID: 1959017164}
-  m_Layer: 8
-  m_Name: Plug Off Wire End Position
+  m_Layer: 0
+  m_Name: Wire End Position
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6740,32 +6815,6 @@ Transform:
   m_Father: {fileID: 1364408141}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1959017164
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959017162}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.15829252, y: 0.1271663}
-  m_EdgeRadius: 0
 --- !u!43 &2038499991
 Mesh:
   m_ObjectHideFlags: 0
@@ -6982,7 +7031,7 @@ MonoBehaviour:
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cb11e7d9c52815a013853913
+  m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -7185,7 +7234,7 @@ MonoBehaviour:
   m_Intensity: 0.7
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cb11e7d9c52815a013853913
+  m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0

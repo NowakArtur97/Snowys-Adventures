@@ -13,9 +13,9 @@ TagManager:
   - UI
   - Floor
   - Player
-  - Wire
   - Furniture
-  - 
+  - Plugable In
+  - Plugable Out
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 3655799243
+    locked: 0
+  - name: Electrical Contact
+    uniqueID: 3381527553
     locked: 0
   - name: Wire
     uniqueID: 2514362545

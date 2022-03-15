@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Wire : MonoBehaviour
 {
-    [SerializeField] private Transform _electricDevicePosition;
-    [SerializeField] private Transform _electricContactPosition;
+    [SerializeField] private Transform _wireStartPosition;
+    [SerializeField] private Transform _wireEndPosition;
     [SerializeField] private float _wireSegmentLength = 0.25f;
     [SerializeField] private int _wireLength = 35;
     [SerializeField] private float _wireWidth = 0.1f;
@@ -18,7 +18,7 @@ public class Wire : MonoBehaviour
     {
         _mylineRenderer = GetComponent<LineRenderer>();
 
-        Vector3 wireStartPoint = _electricDevicePosition.transform.position;
+        Vector3 wireStartPoint = _wireStartPosition.transform.position;
 
         for (int i = 0; i < _wireLength - 1; i++)
         {
@@ -26,7 +26,7 @@ public class Wire : MonoBehaviour
         }
 
         WireSegment lastSegment = _wireSegments[_wireSegments.Count - 1];
-        lastSegment.newPosition = _electricContactPosition.transform.position;
+        lastSegment.newPosition = _wireEndPosition.transform.position;
         _wireSegments.Add(lastSegment);
     }
 
@@ -71,11 +71,11 @@ public class Wire : MonoBehaviour
     private void ApplyConstraints()
     {
         WireSegment firstSegment = _wireSegments[0];
-        firstSegment.newPosition = _electricDevicePosition.transform.position;
+        firstSegment.newPosition = _wireStartPosition.transform.position;
         _wireSegments[0] = firstSegment;
 
         WireSegment lastSegment = _wireSegments[_wireSegments.Count - 1];
-        lastSegment.newPosition = _electricContactPosition.transform.position;
+        lastSegment.newPosition = _wireEndPosition.transform.position;
         _wireSegments[_wireSegments.Count - 1] = lastSegment;
 
         for (int segmentIndex = 0; segmentIndex < _wireLength - 1; segmentIndex++)

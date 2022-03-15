@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using UnityEngine;
+using System.Linq;
 
 public class PlugInState : AbilityState
 {
@@ -10,10 +10,6 @@ public class PlugInState : AbilityState
         base.Enter();
 
         Player.CoreContainer.Movement.SetVelocityZero();
-
-        Collider2D[] plugableInClose = Player.CoreContainer.CollisionSenses.ClosePlugableIn;
-
-        Debug.Log(plugableInClose.Length);
     }
 
     public override void LogicUpdate()
@@ -24,5 +20,14 @@ public class PlugInState : AbilityState
         {
             IsAbilityFinished = true;
         }
+    }
+
+    public override void AnimationTrigger()
+    {
+        base.AnimationTrigger();
+
+        Player.CoreContainer.CollisionSenses.ClosePlugableIn
+            .ToList()
+            .ForEach(plugable => plugable.gameObject.GetComponentInParent<ElectricDevice>().Interact());
     }
 }
