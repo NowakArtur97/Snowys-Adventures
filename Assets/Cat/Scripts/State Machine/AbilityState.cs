@@ -7,6 +7,13 @@ public abstract class AbilityState : State
 
     public AbilityState(Player entity, List<string> animationBoolNames) : base(entity, animationBoolNames) { }
 
+    public override void Enter()
+    {
+        base.Enter();
+
+        IsAbilityFinished = false;
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();

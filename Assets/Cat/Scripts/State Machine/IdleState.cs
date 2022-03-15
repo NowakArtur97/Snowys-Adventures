@@ -17,13 +17,26 @@ public class IdleState : GroundedState
 
         if (!IsExitingState)
         {
-            if (Player.CoreContainer.Input.JumpInput)
+            if (JumpInput)
             {
                 Player.StateMachine.ChangeState(Player.JumpState);
             }
             else if (Player.CoreContainer.Input.MovementInput.x != 0)
             {
                 Player.StateMachine.ChangeState(Player.MoveState);
+            }
+            else if (InteractInput)
+            {
+                Player.CoreContainer.Input.UseInteractInput();
+
+                if (IsPlugablInClose)
+                {
+                    Player.StateMachine.ChangeState(Player.PlugInState);
+                }
+                else if (IsPlugablOutClose)
+                {
+                    Player.StateMachine.ChangeState(Player.PlugOutState);
+                }
             }
         }
     }

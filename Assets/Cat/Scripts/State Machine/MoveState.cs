@@ -25,6 +25,19 @@ public class MoveState : GroundedState
             {
                 Player.StateMachine.ChangeState(Player.IdleState);
             }
+            else if (InteractInput)
+            {
+                Player.CoreContainer.Input.UseInteractInput();
+
+                if (IsPlugablInClose)
+                {
+                    Player.StateMachine.ChangeState(Player.PlugInState);
+                }
+                else if (IsPlugablOutClose)
+                {
+                    Player.StateMachine.ChangeState(Player.PlugOutState);
+                }
+            }
         }
     }
 }

@@ -15,12 +15,9 @@ public class LandState : GroundedState
     {
         base.LogicUpdate();
 
-        if (!IsExitingState)
+        if (!IsExitingState && IsAnimationFinished)
         {
-            if (IsAnimationFinished)
-            {
-                Player.StateMachine.ChangeState(Player.IdleState);
-            }
+            Player.StateMachine.ChangeState(Player.IdleState);
         }
     }
 }

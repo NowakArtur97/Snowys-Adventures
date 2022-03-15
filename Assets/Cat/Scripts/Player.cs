@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
     public JumpState JumpState { get; private set; }
     public InAirState InAirState { get; private set; }
     public LandState LandState { get; private set; }
+    public PlugInState PlugInState { get; private set; }
+    public PlugOutState PlugOutState { get; private set; }
 
     private void Awake()
     {
@@ -35,6 +37,8 @@ public class Player : MonoBehaviour
         JumpState = new JumpState(this, new List<string>() { "inAir" });
         InAirState = new InAirState(this, new List<string>() { "inAir" });
         LandState = new LandState(this, new List<string>() { "land" });
+        PlugInState = new PlugInState(this, new List<string>() { "plugIn" });
+        PlugOutState = new PlugOutState(this, new List<string>() { "plugOut" });
     }
 
     private void Start() => StateMachine = new FiniteStateMachine(IdleState);
