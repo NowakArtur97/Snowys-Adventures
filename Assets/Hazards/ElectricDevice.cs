@@ -1,12 +1,15 @@
+using System;
 using UnityEngine;
 
 public abstract class ElectricDevice : MonoBehaviour
 {
     [SerializeField] private ElectricDeviceState _startingState = ElectricDeviceState.ON;
 
-    protected ElectricDeviceState CurrentState { get; private set; }
+    public ElectricDeviceState CurrentState { get; private set; }
 
     public enum ElectricDeviceState { ON, OFF }
+
+    public Action OnTurnOff;
 
     protected virtual void Awake()
     {
@@ -36,5 +39,9 @@ public abstract class ElectricDevice : MonoBehaviour
 
     protected virtual void TurnOn() => CurrentState = ElectricDeviceState.ON;
 
-    protected virtual void TurnOff() => CurrentState = ElectricDeviceState.OFF;
+    protected virtual void TurnOff()
+    {
+        CurrentState = ElectricDeviceState.OFF;
+        OnTurnOff?.Invoke();
+    }
 }

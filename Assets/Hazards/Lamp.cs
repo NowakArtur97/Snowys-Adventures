@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -13,11 +11,13 @@ public abstract class Lamp : ElectricDevice
 
     protected Light2D MainLight { get; private set; }
     protected Light2D BulbLight { get; private set; }
+    private PolygonCollider2D _lightCheckerPolygonCollider2D;
 
     protected override void Awake()
     {
         MainLight = transform.Find(LIGHT_OBJECT).GetComponent<Light2D>();
         BulbLight = transform.Find(BULB_LIGHT_OBJECT).GetComponent<Light2D>();
+        _lightCheckerPolygonCollider2D = GetComponentInChildren<PolygonCollider2D>();
 
         base.Awake();
     }
@@ -26,5 +26,7 @@ public abstract class Lamp : ElectricDevice
     {
         MainLight.intensity = isOn ? _intensityOn : _intensityOff;
         BulbLight.intensity = isOn ? _intensityOn : _intensityOff;
+
+        _lightCheckerPolygonCollider2D.gameObject.SetActive(isOn);
     }
 }
