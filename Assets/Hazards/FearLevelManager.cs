@@ -16,6 +16,14 @@ public class FearLevelManager : MonoBehaviour
 
     private void Awake() => _fearLevelScrollbarHandle.SetActive(false);
 
+    private void Start()
+    {
+        if (_numberOfLights == 0)
+        {
+            _isOutsideTheLight = true;
+        }
+    }
+
     private void Update()
     {
         if (_isOutsideTheLight && !_isInCoroutine)
@@ -36,11 +44,6 @@ public class FearLevelManager : MonoBehaviour
 
         if (_numberOfLights == 0)
         {
-            if (!_fearLevelScrollbarHandle.activeInHierarchy)
-            {
-                _fearLevelScrollbarHandle.SetActive(true);
-            }
-
             _isOutsideTheLight = true;
         }
     }
@@ -50,6 +53,11 @@ public class FearLevelManager : MonoBehaviour
         _isInCoroutine = true;
 
         yield return new WaitForSeconds(_timeBetweenFearSteps);
+
+        if (!_fearLevelScrollbarHandle.activeInHierarchy)
+        {
+            _fearLevelScrollbarHandle.SetActive(true);
+        }
 
         if (_isOutsideTheLight)
         {
