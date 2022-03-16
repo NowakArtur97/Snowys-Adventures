@@ -31,8 +31,6 @@ public class LampWithWire : Lamp
 
     private void ChangeState(bool isOn, Vector3 wireEndPosition)
     {
-        ChangeState(isOn);
-
         _wireEnd.transform.position = wireEndPosition;
 
         _electricalContactBoxcollider2D.enabled = isOn;

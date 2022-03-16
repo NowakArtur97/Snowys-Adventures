@@ -22,7 +22,21 @@ public abstract class Lamp : ElectricDevice
         base.Awake();
     }
 
-    protected void ChangeState(bool isOn)
+    protected override void TurnOn()
+    {
+        base.TurnOn();
+
+        ChangeState(true);
+    }
+
+    protected override void TurnOff()
+    {
+        base.TurnOff();
+
+        ChangeState(false);
+    }
+
+    private void ChangeState(bool isOn)
     {
         MainLight.intensity = isOn ? _intensityOn : _intensityOff;
         BulbLight.intensity = isOn ? _intensityOn : _intensityOff;
