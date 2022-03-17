@@ -32,7 +32,13 @@ public class State
         DoChecks();
     }
 
-    public virtual void LogicUpdate() { }
+    public virtual void LogicUpdate()
+    {
+        if (Player.IsScared && Player.StateMachine.CurrentState != Player.ScaredState)
+        {
+            Player.StateMachine.ChangeState(Player.ScaredState);
+        }
+    }
 
     public virtual void PhysicsUpdate() => DoChecks();
 
@@ -45,8 +51,11 @@ public class State
 
     public virtual void DoChecks() { }
 
-    public virtual void AnimationFinishedTrigger() => IsAnimationFinished = true;
-
+    public void AnimationFinishedTrigger()
+    {
+        IsAnimationFinished = true;
+        Debug.Log(_animationBoolName);
+    }
     public virtual void AnimationTrigger() { }
 
     private string GetRandomAnimation() => _animationBoolNames[Random.Range(0, _animationBoolNames.Count)];

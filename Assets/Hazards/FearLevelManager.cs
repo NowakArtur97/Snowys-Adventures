@@ -63,6 +63,11 @@ public class FearLevelManager : MonoBehaviour
         {
             _levelOfFear += _fearStep;
             _fearLevelScrollbar.size = _levelOfFear;
+
+            if (_fearLevelScrollbar.size >= 1)
+            {
+                FindObjectOfType<Player>().Scare();
+            }
         }
 
         _isInCoroutine = false;

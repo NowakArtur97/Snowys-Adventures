@@ -27,6 +27,9 @@ public class Player : MonoBehaviour
     public LandState LandState { get; private set; }
     public PlugInState PlugInState { get; private set; }
     public PlugOutState PlugOutState { get; private set; }
+    public ScaredState ScaredState { get; private set; }
+
+    public bool IsScared { get; private set; }
 
     private void Awake()
     {
@@ -34,11 +37,15 @@ public class Player : MonoBehaviour
 
         IdleState = new IdleState(this, new List<string>() { "idle1", "idle2", "idle3", "idle4" });
         MoveState = new MoveState(this, new List<string>() { "move" });
+
         JumpState = new JumpState(this, new List<string>() { "inAir" });
         InAirState = new InAirState(this, new List<string>() { "inAir" });
         LandState = new LandState(this, new List<string>() { "land" });
+
         PlugInState = new PlugInState(this, new List<string>() { "plugIn" });
         PlugOutState = new PlugOutState(this, new List<string>() { "plugOut" });
+
+        ScaredState = new ScaredState(this, new List<string>() { "scared" });
     }
 
     private void Start() => StateMachine = new FiniteStateMachine(IdleState);
@@ -46,4 +53,6 @@ public class Player : MonoBehaviour
     private void Update() => StateMachine.CurrentState.LogicUpdate();
 
     private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
+
+    public void Scare() => IsScared = true;
 }
