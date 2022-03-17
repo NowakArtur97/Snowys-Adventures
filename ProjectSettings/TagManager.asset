@@ -17,7 +17,7 @@ TagManager:
   - Turn On
   - Turn Off
   - Light
-  - 
+  - Hazard
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Furniture
     uniqueID: 2685741253
+    locked: 0
+  - name: Hazard
+    uniqueID: 3966993213
     locked: 0
   - name: Cat
     uniqueID: 322536723

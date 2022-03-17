@@ -51,11 +51,8 @@ public class State
 
     public virtual void DoChecks() { }
 
-    public void AnimationFinishedTrigger()
-    {
-        IsAnimationFinished = true;
-        Debug.Log(_animationBoolName);
-    }
+    public void AnimationFinishedTrigger() => IsAnimationFinished = true;
+
     public virtual void AnimationTrigger() { }
 
     private string GetRandomAnimation() => _animationBoolNames[Random.Range(0, _animationBoolNames.Count)];
