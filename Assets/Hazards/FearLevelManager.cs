@@ -54,22 +54,27 @@ public class FearLevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(_timeBetweenFearSteps);
 
+        if (_isOutsideTheLight)
+        {
+            Scare();
+        }
+
+        _isInCoroutine = false;
+    }
+
+    public void Scare()
+    {
         if (!_fearLevelScrollbarHandle.activeInHierarchy)
         {
             _fearLevelScrollbarHandle.SetActive(true);
         }
 
-        if (_isOutsideTheLight)
+        _levelOfFear += _fearStep;
+        _fearLevelScrollbar.size = _levelOfFear;
+
+        if (_fearLevelScrollbar.size >= 1)
         {
-            _levelOfFear += _fearStep;
-            _fearLevelScrollbar.size = _levelOfFear;
-
-            if (_fearLevelScrollbar.size >= 1)
-            {
-                FindObjectOfType<Player>().Scare();
-            }
+            FindObjectOfType<Player>().Scare();
         }
-
-        _isInCoroutine = false;
     }
 }
