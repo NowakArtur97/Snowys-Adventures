@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
     public ScaredState ScaredState { get; private set; }
 
     public bool IsScared { get; private set; }
+    public bool IsTerrified { get; private set; }
 
     private void Awake()
     {
@@ -55,4 +56,8 @@ public class Player : MonoBehaviour
     private void FixedUpdate() => StateMachine.CurrentState.PhysicsUpdate();
 
     public void Scare() => IsScared = true;
+
+    public void CalmDown() => IsScared = false;
+
+    public void Terrify() => IsTerrified = true;
 }

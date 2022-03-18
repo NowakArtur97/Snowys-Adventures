@@ -5,12 +5,7 @@ public class ScaredState : State
 {
     public ScaredState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
-    public override void Enter()
-    {
-        base.Enter();
-
-        Player.CoreContainer.Movement.SetVelocityZero();
-    }
+    private bool _isGrounded;
 
     public override void LogicUpdate()
     {
@@ -18,8 +13,28 @@ public class ScaredState : State
 
         if (!IsExitingState && IsAnimationFinished)
         {
-            // TODO: ScaredState: Show restart UI
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Player.CalmDown();
+
+            if (Player.IsTerrified)
+            {
+                // TODO: ScaredState: Show restart UI
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+            else if (_isGrounded && Player.CoreContainer.Movement.CurrentVelocity.y < 0.01)
+            {
+                Player.StateMachine.ChangeState(Player.IdleState);
+            }
+            else if (!_isGrounded)
+            {
+                Player.StateMachine.ChangeState(Player.InAirState);
+            }
         }
+    }
+
+    public override void DoChecks()
+    {
+        base.DoChecks();
+
+        _isGrounded = Player.CoreContainer.CollisionSenses.IsGrounded;
     }
 }

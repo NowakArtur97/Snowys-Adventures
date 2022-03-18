@@ -18,7 +18,7 @@ public class FearLevelManager : MonoBehaviour
 
     private void Start()
     {
-        if (_numberOfLights == 0)
+        if (IsPlayerInDarkness())
         {
             _isOutsideTheLight = true;
         }
@@ -42,7 +42,7 @@ public class FearLevelManager : MonoBehaviour
     {
         _numberOfLights--;
 
-        if (_numberOfLights == 0)
+        if (IsPlayerInDarkness())
         {
             _isOutsideTheLight = true;
         }
@@ -56,13 +56,13 @@ public class FearLevelManager : MonoBehaviour
 
         if (_isOutsideTheLight)
         {
-            Scare();
+            IncreaseFearLevel();
         }
 
         _isInCoroutine = false;
     }
 
-    public void Scare()
+    public void IncreaseFearLevel()
     {
         if (!_fearLevelScrollbarHandle.activeInHierarchy)
         {
@@ -72,9 +72,13 @@ public class FearLevelManager : MonoBehaviour
         _levelOfFear += _fearStep;
         _fearLevelScrollbar.size = _levelOfFear;
 
-        if (_fearLevelScrollbar.size >= 1)
+        if (IsFearLevelMax())
         {
-            FindObjectOfType<Player>().Scare();
+            FindObjectOfType<Player>().Terrify();
         }
     }
+
+    private bool IsPlayerInDarkness() => _numberOfLights == 0;
+
+    private bool IsFearLevelMax() => _fearLevelScrollbar.size >= 1;
 }
