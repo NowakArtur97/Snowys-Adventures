@@ -4,6 +4,13 @@ public class IdleState : GroundedState
 {
     public IdleState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
+    public override void Enter()
+    {
+        base.Enter();
+
+        Player.CoreContainer.Movement.SetVelocityZero();
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();

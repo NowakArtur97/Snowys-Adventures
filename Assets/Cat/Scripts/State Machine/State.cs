@@ -29,8 +29,6 @@ public class State
         _animationBoolName = GetRandomAnimation();
         Player.CoreContainer.Animation.SetBoolVariable(_animationBoolName, true);
 
-        Player.CoreContainer.Movement.SetVelocityZero();
-
         DoChecks();
     }
 

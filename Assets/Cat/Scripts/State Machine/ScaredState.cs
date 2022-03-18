@@ -1,11 +1,17 @@
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 
 public class ScaredState : State
 {
     public ScaredState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
     private bool _isGrounded;
+
+    public override void Enter()
+    {
+        base.Enter();
+
+        Player.CoreContainer.Movement.SetVelocityZero();
+    }
 
     public override void LogicUpdate()
     {
@@ -18,7 +24,7 @@ public class ScaredState : State
             if (Player.IsTerrified)
             {
                 // TODO: ScaredState: Show restart UI
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                LevelManager.ReloadScene();
             }
             else if (_isGrounded && Player.CoreContainer.Movement.CurrentVelocity.y < 0.01)
             {
