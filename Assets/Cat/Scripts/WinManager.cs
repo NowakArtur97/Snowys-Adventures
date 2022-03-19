@@ -22,7 +22,7 @@ public class WinManager : MonoBehaviour
 
         if (_totalNumberOfFishes == _currentNumberOfFishes)
         {
-            LevelManager.LoadNextScene();
+            FindObjectOfType<SceneLoader>().StartEndLevelTransition();
         }
     }
 
