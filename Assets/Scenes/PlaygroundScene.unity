@@ -3293,7 +3293,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 772077506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.47, y: 4.41, z: 0}
+  m_LocalPosition: {x: -5.75, y: 4.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3368,7 +3368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ed2554a58a3984c8a9faf4c35fafe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: 1
+  _startingState: 0
   _intensityOn: 0.7
   _intensityOff: 0
   _lightSwitchOn: {fileID: 582671577}
@@ -4665,9 +4665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dc323003b26baf44aad7e986cfd9187, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: 0
-  pointA: {fileID: 1583035065}
-  pointB: {fileID: 451216443}
+  _startingState: 1
+  _intensityOn: 1
+  _intensityOff: 0
+  _pointA: {fileID: 1583035065}
+  _pointB: {fileID: 451216443}
   _speed: 3
 --- !u!61 &1063531510
 BoxCollider2D:
@@ -7358,7 +7360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293013213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.798, y: -1.826, z: 0}
+  m_LocalPosition: {x: 0.84, y: -1.705, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7547,7 +7549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340769308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.28, y: -3.67, z: 0}
+  m_LocalPosition: {x: 8.399, y: -4.369, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8887,7 +8889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611158220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9900007, y: 0.16400003, z: 0}
+  m_LocalPosition: {x: 0.9900007, y: 0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
