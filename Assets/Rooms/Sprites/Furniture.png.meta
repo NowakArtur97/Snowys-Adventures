@@ -116,36 +116,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Furniture_0
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 32
-        width: 5
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 729f8a9f7b71d554b874bcd9964e9676
-      internalID: 1164100098
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Furniture_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 112
+        width: 100
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -161,12 +140,12 @@ TextureImporter:
       name: Furniture_2
       rect:
         serializedVersion: 2
-        x: 112
+        x: 100
         y: 0
         width: 48
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,12 +161,12 @@ TextureImporter:
       name: Furniture_3
       rect:
         serializedVersion: 2
-        x: 160
+        x: 148
         y: 0
         width: 16
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
