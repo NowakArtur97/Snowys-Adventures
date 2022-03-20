@@ -370,6 +370,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 25006646}
+  - component: {fileID: 25006648}
   - component: {fileID: 25006647}
   m_Layer: 0
   m_Name: Bulb Light
@@ -576,6 +577,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &25006648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25006645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0.1
 --- !u!1 &27081896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,6 +1425,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 246522570}
+  - component: {fileID: 246522572}
   - component: {fileID: 246522571}
   m_Layer: 0
   m_Name: Light
@@ -1530,6 +1546,20 @@ MonoBehaviour:
   - {x: 9.124592, y: 9.104578, z: 0}
   - {x: 6.9034967, y: 9.095142, z: 0}
   - {x: 6.3185406, y: 8.647226, z: -0.000000053085387}
+--- !u!114 &246522572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246522569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0
 --- !u!1 &255899858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1750,7 @@ Transform:
   - {fileID: 782789550}
   - {fileID: 772077507}
   - {fileID: 561442534}
+  - {fileID: 1527197106}
   m_Father: {fileID: 142069562}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2849,8 +2880,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 1
-  _intensityOn: 0.7
-  _intensityOff: 0
   _ligtingTime: 3
   _detectionDistance: 10
   _whatIsDetected:
@@ -3050,6 +3079,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 592783191}
+  - component: {fileID: 592783193}
   - component: {fileID: 592783192}
   m_Layer: 0
   m_Name: Bulb Light
@@ -3151,6 +3181,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &592783193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592783190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0.1
 --- !u!1 &600643265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,8 +3854,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 0
-  _intensityOn: 0.7
-  _intensityOff: 0
   _lightSwitchOn: {fileID: 582671577}
   _lightSwitchOff: {fileID: 818876959}
 --- !u!1 &782789549
@@ -3958,8 +4000,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 1
-  _intensityOn: 0.7
-  _intensityOff: 0
   _wireEnd: {fileID: 1005428430}
   _electricalContactPostion: {fileID: 2088408487}
   _plugOutPostion: {fileID: 1293013214}
@@ -4538,8 +4578,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 1
-  _intensityOn: 0.7
-  _intensityOff: 0
   _wireEnd: {fileID: 1959017162}
   _electricalContactPostion: {fileID: 1498425576}
   _plugOutPostion: {fileID: 1611158221}
@@ -5599,8 +5637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 1
-  _intensityOn: 1
-  _intensityOff: 0
   _pointA: {fileID: 1583035065}
   _pointB: {fileID: 451216443}
   _speed: 3
@@ -8802,6 +8838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1364818240}
+  - component: {fileID: 1364818242}
   - component: {fileID: 1364818241}
   m_Layer: 0
   m_Name: Bulb Light
@@ -8912,6 +8949,20 @@ MonoBehaviour:
   - {x: 0.62623507, y: -0.21644878, z: 0}
   - {x: 0.48957115, y: 0.016164303, z: 0}
   - {x: -0.5075961, y: 0.016021252, z: 0}
+--- !u!114 &1364818242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364818239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0.1
 --- !u!1 &1419218660
 GameObject:
   m_ObjectHideFlags: 0
@@ -9103,6 +9154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481418246}
+  - component: {fileID: 1481418248}
   - component: {fileID: 1481418247}
   m_Layer: 0
   m_Name: Bulb Light
@@ -9204,6 +9256,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1481418248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481418245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0.1
 --- !u!1 &1498425575
 GameObject:
   m_ObjectHideFlags: 0
@@ -9374,6 +9440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1516500479}
+  - component: {fileID: 1516500481}
   - component: {fileID: 1516500480}
   m_Layer: 0
   m_Name: Light
@@ -9568,6 +9635,130 @@ MonoBehaviour:
   - {x: 0.34049463, y: 0.08442068, z: 0}
   - {x: 18.14, y: 21.67, z: 0}
   - {x: -17.86, y: 21.67, z: 0}
+--- !u!114 &1516500481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516500478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0
+--- !u!1 &1527197105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1527197106}
+  - component: {fileID: 1527197107}
+  m_Layer: 0
+  m_Name: Global Light 2D
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1527197106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527197105}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 341895378}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1527197107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527197105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 4
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 0.008333334
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: cb11e7d901048ec9c52815a03d8373ec13853913
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_Vertices:
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: -0.70710677, g: 0.70710677, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.9985302, y: 0.9985302, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: -0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: -0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0.70710665, g: -0.7071069, b: 0, a: 0}
+    uv: {x: 0, y: 0}
+  - position: {x: 0.99853003, y: -0.9985304, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  - position: {x: 0, y: 0, z: 0}
+    color: {r: 0, g: 0, b: 0, a: 1}
+    uv: {x: 0, y: 0}
+  m_Triangles: 030001000800020000000100030002000100050003000800040002000300050004000300070005000800060004000500070006000500010007000800000006000700010000000700
+  m_LocalBounds:
+    m_Center: {x: 0, y: -0.00000011920929, z: 0}
+    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!43 &1533323141
 Mesh:
   m_ObjectHideFlags: 0
@@ -9803,6 +9994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1610817987}
+  - component: {fileID: 1610817989}
   - component: {fileID: 1610817988}
   m_Layer: 0
   m_Name: Light
@@ -9997,6 +10189,20 @@ MonoBehaviour:
   - {x: 0.34049463, y: 0.08442068, z: 0}
   - {x: 5, y: 8.700001, z: 0}
   - {x: -5, y: 8.700001, z: 0}
+--- !u!114 &1610817989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610817986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0
 --- !u!1 &1611158220
 GameObject:
   m_ObjectHideFlags: 0
@@ -10504,6 +10710,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1939679008}
+  - component: {fileID: 1939679010}
   - component: {fileID: 1939679009}
   m_Layer: 0
   m_Name: Light
@@ -10698,6 +10905,20 @@ MonoBehaviour:
   - {x: 0.34049463, y: 0.08442068, z: 0}
   - {x: 5, y: 8.700001, z: 0}
   - {x: -5, y: 8.700001, z: 0}
+--- !u!114 &1939679010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939679007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0
 --- !u!1 &1959017162
 GameObject:
   m_ObjectHideFlags: 0
@@ -11199,6 +11420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096285817}
+  - component: {fileID: 2096285819}
   - component: {fileID: 2096285818}
   m_Layer: 0
   m_Name: Light
@@ -11393,6 +11615,20 @@ MonoBehaviour:
   - {x: 0.34049463, y: 0.08442068, z: 0}
   - {x: 5, y: 8.700001, z: 0}
   - {x: -5, y: 8.700001, z: 0}
+--- !u!114 &2096285819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096285816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0
 --- !u!1 &2099660616
 GameObject:
   m_ObjectHideFlags: 0
@@ -11499,6 +11735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2104255350}
+  - component: {fileID: 2104255352}
   - component: {fileID: 2104255351}
   m_Layer: 0
   m_Name: Bulb Light
@@ -11600,3 +11837,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &2104255352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104255349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 002f99f25c266574da7155f6c63e7a45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensityOn: 0.7
+  _intensityOff: 0.1
