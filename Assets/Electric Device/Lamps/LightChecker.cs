@@ -46,12 +46,12 @@ public class LightChecker : MonoBehaviour
     private void EnterLight()
     {
         _isInLight = true;
-        _fearLevelManager.RegistrerLight();
+        _fearLevelManager?.RegistrerLight();
     }
 
     private void LeaveLight()
     {
         _isInLight = false;
-        _fearLevelManager.UnregistrerLight();
+        _fearLevelManager?.UnregistrerLight();
     }
 }
