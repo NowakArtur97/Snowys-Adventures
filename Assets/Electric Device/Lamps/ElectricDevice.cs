@@ -20,7 +20,10 @@ public abstract class ElectricDevice : MonoBehaviour
         _lights = GetComponentsInChildren<LampLight>().ToList();
 
         CurrentState = _startingState;
+    }
 
+    private void Start()
+    {
         if (CurrentState == ElectricDeviceState.ON)
         {
             TurnOn();

@@ -940,7 +940,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.09557986, y: -0.34706724}
+  m_Offset: {x: 0.0673933, y: -0.005307436}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -951,7 +951,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43474627, y: 0.41383767}
+  m_Size: {x: 0.4942732, y: 0.0756011}
   m_EdgeRadius: 0
 --- !u!251 &97363731
 PlatformEffector2D:
@@ -964,13 +964,13 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 65920
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
-  m_UseSideBounce: 0
+  m_UseSideBounce: 1
   m_SideArc: 1
 --- !u!1 &103903322
 GameObject:
@@ -1630,6 +1630,7 @@ Transform:
   - {fileID: 535281679}
   - {fileID: 668031874}
   - {fileID: 1451395298}
+  - {fileID: 411112367}
   m_Father: {fileID: 1500833815}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1650,6 +1651,8 @@ MonoBehaviour:
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 320
+  _wallCheck: {fileID: 411112367}
+  _wallCheckRadius: 0.2
   _plugInCheck: {fileID: 668031874}
   _plugInCheckRadius: 0.3
   _whatIsPlugableIn:
@@ -1687,7 +1690,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280323046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.03, y: -2.04, z: 0}
+  m_LocalPosition: {x: 1.24, y: -3.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1707,10 +1710,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1755,7 +1758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveVelocity: 4
-  _jumpVelocity: 5
+  _jumpVelocity: 5.6
 --- !u!43 &339058327
 Mesh:
   m_ObjectHideFlags: 0
@@ -2366,6 +2369,37 @@ MonoBehaviour:
   _timeBetweenFearSteps: 1
   _fearLevelScrollbar: {fileID: 87272072}
   _fearLevelScrollbarHandle: {fileID: 2037858075}
+--- !u!1 &411112366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411112367}
+  m_Layer: 7
+  m_Name: Wall Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &411112367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411112366}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.407, y: -0.138, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 255899859}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &440142118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440142118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.92, y: -4.98, z: -0.02455297}
+  m_LocalPosition: {x: 2.96, y: -5.05, z: -0.02455297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2662,7 +2696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511120969}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.22, y: -2.44, z: 0}
+  m_LocalPosition: {x: -0.99, y: -0.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4606,7 +4640,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18135953, y: -0.34706724}
+  m_Offset: {x: 0.15214199, y: -0.005307436}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4617,7 +4651,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4414997, y: 0.41383767}
+  m_Size: {x: 0.49989974, y: 0.0756011}
   m_EdgeRadius: 0
 --- !u!251 &792944326
 PlatformEffector2D:
@@ -4630,13 +4664,13 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 65920
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
-  m_UseSideBounce: 0
+  m_UseSideBounce: 1
   m_SideArc: 1
 --- !u!1 &818876959
 GameObject:
@@ -5277,13 +5311,13 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 65664
+    m_Bits: 65920
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
-  m_UseSideBounce: 0
+  m_UseSideBounce: 1
   m_SideArc: 1
 --- !u!61 &940640694
 BoxCollider2D:
@@ -8396,6 +8430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1154549210}
   - component: {fileID: 1154549211}
+  - component: {fileID: 1154549214}
   - component: {fileID: 1154549212}
   - component: {fileID: 1154549213}
   m_Layer: 8
@@ -8413,7 +8448,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154549209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.27, y: -2.84, z: -0.026262961}
+  m_LocalPosition: {x: 1.1, y: -3.38, z: -0.026262961}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8483,7 +8518,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.016929269}
   m_SpriteTilingProperty:
@@ -8525,6 +8560,25 @@ MonoBehaviour:
   m_ShapePathHash: -1702400499
   m_Mesh: {fileID: 1442759288}
   m_InstanceId: 28564
+--- !u!251 &1154549214
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1154549209}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 65920
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 1
+  m_SideArc: 1
 --- !u!1 &1164187903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9217,7 +9271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340769308}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.399, y: -4.369, z: 0}
+  m_LocalPosition: {x: 10, y: -4.369, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9969,13 +10023,13 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 65920
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
-  m_UseSideBounce: 0
+  m_UseSideBounce: 1
   m_SideArc: 1
 --- !u!43 &1442759288
 Mesh:
@@ -10875,7 +10929,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607127264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.56, y: -0.05, z: 0}
+  m_LocalPosition: {x: 0.71, y: 0.76, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11403,7 +11457,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722188477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.338, y: -4.315, z: 0}
+  m_LocalPosition: {x: -8.52, y: -4.315, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11533,13 +11587,13 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 65920
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
   m_SurfaceArc: 180
   m_UseSideFriction: 0
-  m_UseSideBounce: 0
+  m_UseSideBounce: 1
   m_SideArc: 1
 --- !u!1 &1834386526
 GameObject:

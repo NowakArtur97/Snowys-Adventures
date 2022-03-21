@@ -3,15 +3,15 @@ using UnityEngine;
 public class CollisionSenses : MonoBehaviour
 {
     [SerializeField] private Transform _groundCheck;
-    [SerializeField] private float _groundCheckRadius = 1f;
+    [SerializeField] private float _groundCheckRadius = 0.1f;
     [SerializeField] private LayerMask _whatIsGround;
 
     [SerializeField] private Transform _plugInCheck;
-    [SerializeField] private float _plugInCheckRadius = 1f;
+    [SerializeField] private float _plugInCheckRadius = 0.3f;
     [SerializeField] private LayerMask _whatIsPlugableIn;
 
     [SerializeField] private Transform _plugOutCheck;
-    [SerializeField] private float _plugOutCheckRadius = 1f;
+    [SerializeField] private float _plugOutCheckRadius = 0.3f;
     [SerializeField] private LayerMask _whatIsPlugableOut;
 
     public bool IsGrounded => Physics2D.OverlapCircle(_groundCheck.position, _groundCheckRadius, _whatIsGround);
