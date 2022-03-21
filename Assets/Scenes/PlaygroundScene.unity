@@ -1651,8 +1651,6 @@ MonoBehaviour:
   _whatIsGround:
     serializedVersion: 2
     m_Bits: 320
-  _wallCheck: {fileID: 411112367}
-  _wallCheckRadius: 0.2
   _plugInCheck: {fileID: 668031874}
   _plugInCheckRadius: 0.3
   _whatIsPlugableIn:
@@ -9897,7 +9895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1419218661
 RectTransform:
   m_ObjectHideFlags: 0
