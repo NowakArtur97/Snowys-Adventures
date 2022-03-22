@@ -3,13 +3,20 @@ using UnityEngine.InputSystem;
 
 public class Input : MonoBehaviour
 {
+    [SerializeField] private bool _canMove = true;
     [SerializeField] private bool _canJump = true;
 
     public Vector2 MovementInput { get; private set; }
     public bool JumpInput { get; private set; }
     public bool InteractInput { get; private set; }
 
-    public void OnMove(InputAction.CallbackContext context) => MovementInput = context.ReadValue<Vector2>();
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        if (_canMove)
+        {
+            MovementInput = context.ReadValue<Vector2>();
+        }
+    }
 
     public void OnJump(InputAction.CallbackContext context)
     {
