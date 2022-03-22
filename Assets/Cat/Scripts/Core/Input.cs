@@ -3,6 +3,8 @@ using UnityEngine.InputSystem;
 
 public class Input : MonoBehaviour
 {
+    [SerializeField] private bool _canJump = true;
+
     public Vector2 MovementInput { get; private set; }
     public bool JumpInput { get; private set; }
     public bool InteractInput { get; private set; }
@@ -11,7 +13,7 @@ public class Input : MonoBehaviour
 
     public void OnJump(InputAction.CallbackContext context)
     {
-        if (context.started)
+        if (context.started && _canJump)
         {
             JumpInput = true;
         }
