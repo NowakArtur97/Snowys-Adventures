@@ -98,7 +98,7 @@ PlatformEffector2D:
   m_UseColliderMask: 1
   m_ColliderMask:
     serializedVersion: 2
-    m_Bits: 65920
+    m_Bits: 82304
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
@@ -158,4 +158,4 @@ MonoBehaviour:
   - {x: 2.381731, y: -2.818233, z: 0}
   m_ShapePathHash: -501594320
   m_Mesh: {fileID: 0}
-  m_InstanceId: -6938
+  m_InstanceId: 48574
