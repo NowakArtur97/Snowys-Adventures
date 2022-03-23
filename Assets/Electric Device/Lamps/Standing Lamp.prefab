@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6701760303366980712}
+  - component: {fileID: 1203637955779741749}
   - component: {fileID: 6701760303366980715}
   m_Layer: 9
   m_Name: Plug Out Position
@@ -32,6 +33,20 @@ Transform:
   m_Father: {fileID: 6701760304684781668}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1203637955779741749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6701760303366980713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05273153355fd65419e160d85bdcf86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offsetY: 0.32
+  _electricalContactPosition: {fileID: 6701760304060612173}
 --- !u!61 &6701760303366980715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -855,6 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 0
+  _objectsToInteract: []
   _wireEnd: {fileID: 6701760303581670511}
   _electricalContactPostion: {fileID: 6701760304060612173}
   _plugOutPostion: {fileID: 6701760303366980712}
@@ -953,7 +969,7 @@ MonoBehaviour:
   - {x: -0.043079376, y: -2.0871365, z: 0}
   m_ShapePathHash: 172577175
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48730
+  m_InstanceId: 64422
 --- !u!1 &6701760305190836534
 GameObject:
   m_ObjectHideFlags: 0

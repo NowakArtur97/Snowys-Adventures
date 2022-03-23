@@ -467,6 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startingState: 0
+  _objectsToInteract: []
   _wireEnd: {fileID: 4118856257822799460}
   _electricalContactPostion: {fileID: 4118856259023355149}
   _plugOutPostion: {fileID: 4118856258731145332}
@@ -560,7 +561,7 @@ MonoBehaviour:
   - {x: 0.42381382, y: -1.9246371, z: 0}
   m_ShapePathHash: 1561336597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48682
+  m_InstanceId: 65432
 --- !u!1 &4118856258479839132
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4118856258731145332}
+  - component: {fileID: 6236227342102052005}
   - component: {fileID: 4118856258731145333}
   m_Layer: 9
   m_Name: Plug Out Position
@@ -702,6 +704,20 @@ Transform:
   m_Father: {fileID: 4118856258170766084}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6236227342102052005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118856258731145335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05273153355fd65419e160d85bdcf86a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _offsetY: 0.32
+  _electricalContactPosition: {fileID: 4118856259023355149}
 --- !u!61 &4118856258731145333
 BoxCollider2D:
   m_ObjectHideFlags: 0
