@@ -199,6 +199,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Furniture_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 36
+        width: 76
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013b7e19cc89bb14dac3d39ce29b01ab
+      internalID: -1400351645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -211,6 +232,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Furniture_0: 1164100098
+      Furniture_4: -1400351645
       Furniture_2: -2036234618
       Furniture_1: 779994344
       Furniture_3: -1680759896
