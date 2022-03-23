@@ -208,7 +208,7 @@ TextureImporter:
         width: 76
         height: 90
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,6 +216,48 @@ TextureImporter:
       bones: []
       spriteID: 013b7e19cc89bb14dac3d39ce29b01ab
       internalID: -1400351645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_5
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 36
+        width: 3
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a709d8878d93e044caf704708d739055
+      internalID: -1708031442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Furniture_6
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 36
+        width: 3
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c004ad47302d3444b9b45dc1fb2a5a7
+      internalID: -672175636
       vertices: []
       indices: 
       edges: []
@@ -231,9 +273,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Furniture_6: -672175636
       Furniture_0: 1164100098
       Furniture_4: -1400351645
       Furniture_2: -2036234618
+      Furniture_5: -1708031442
       Furniture_1: 779994344
       Furniture_3: -1680759896
   spritePackingTag: 
