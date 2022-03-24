@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class RobotVacuumCleaner : ElectricDevice
@@ -7,12 +9,16 @@ public class RobotVacuumCleaner : ElectricDevice
     [SerializeField] private Transform _pointA;
     [SerializeField] private Transform _pointB;
     [SerializeField] private float _speed = 6.0f;
+    [SerializeField] private float _timeBeforeRotating = 1.0f;
 
     private Animator _myAnimator;
+    private bool _canRotate;
 
     protected override void Awake()
     {
         _myAnimator = GetComponent<Animator>();
+
+        _canRotate = true;
 
         base.Awake();
     }
@@ -23,11 +29,21 @@ public class RobotVacuumCleaner : ElectricDevice
         {
             Move();
 
-            if (ShouldChangeDirection())
+            if (ShouldChangeDirection() && _canRotate)
             {
                 Flip();
+                StartCoroutine(RotateCoroutine());
             }
         }
+    }
+
+    private IEnumerator RotateCoroutine()
+    {
+        _canRotate = false;
+
+        yield return new WaitForSeconds(_timeBeforeRotating);
+
+        _canRotate = true;
     }
 
     protected override void ChangeState(bool isOn)
