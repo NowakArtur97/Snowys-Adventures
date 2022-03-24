@@ -19,6 +19,4 @@ public class SceneLoader : MonoBehaviour
     }
 
     public void StartEndLevelTransition() => _myAnimator.SetTrigger(END_LEVEL_TRIGGER);
-
-    public void TransitionOverTrigger() => LevelManager.LoadNextScene();
 }

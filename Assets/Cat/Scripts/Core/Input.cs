@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Input : MonoBehaviour
 {
-    [SerializeField] private bool _canMove = true;
-    [SerializeField] private bool _canJump = true;
+    private bool _canMove;
+    private bool _canJump;
 
     public Vector2 MovementInput { get; private set; }
     public bool JumpInput { get; private set; }
@@ -43,4 +44,16 @@ public class Input : MonoBehaviour
     }
 
     public void UseInteractInput() => InteractInput = false;
+
+    public void EnableMovemnt()
+    {
+        _canMove = true;
+        _canJump = true;
+    }
+
+    public void DisableMovemnt()
+    {
+        _canMove = false;
+        _canJump = false;
+    }
 }
