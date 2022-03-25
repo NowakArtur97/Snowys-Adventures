@@ -208,7 +208,7 @@ TextureImporter:
         width: 22
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -216,6 +216,27 @@ TextureImporter:
       bones: []
       spriteID: c5046ad1b340f8e4f8bfff66ef447e65
       internalID: -14275158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lamps_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 28
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e317c15cee98e0c419b3584e549c3c18
+      internalID: 610624160
       vertices: []
       indices: 
       edges: []
@@ -232,6 +253,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Lamps_2: -277552646
+      Lamps_5: 610624160
       Lamps_3: 968285923
       Lamps_4: -14275158
       Lamps_1: -1306310078

@@ -5,11 +5,11 @@ public abstract class Lamp : ElectricDevice
 {
     [SerializeField] private GameObject[] _objectsToInteract;
 
-    private PolygonCollider2D _lightCheckerPolygonCollider2D;
+    private Collider2D _lightCheckerCollider2D;
 
     protected override void Awake()
     {
-        _lightCheckerPolygonCollider2D = GetComponentInChildren<PolygonCollider2D>();
+        _lightCheckerCollider2D = GetComponentInChildren<Collider2D>();
 
         base.Awake();
     }
@@ -18,7 +18,7 @@ public abstract class Lamp : ElectricDevice
     {
         base.ChangeState(isOn);
 
-        _lightCheckerPolygonCollider2D.gameObject.SetActive(isOn);
+        _lightCheckerCollider2D.gameObject.SetActive(isOn);
 
         _objectsToInteract.ToList()
             .ForEach(toInteract => toInteract.SetActive(isOn));
