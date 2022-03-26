@@ -4,12 +4,20 @@ public class MoveState : GroundedState
 {
     public MoveState(Player player, List<string> animationBoolNames) : base(player, animationBoolNames) { }
 
+    public override void Exit()
+    {
+        base.Exit();
+
+        Player.CoreContainer.Sound.StopPlayingSounds();
+    }
+
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
         Player.CoreContainer.Movement.CheckIfShouldFlip((int)XMovementInput);
         Player.CoreContainer.Movement.SetVelocityX(Player.MoveVelocity * XMovementInput);
+        Player.CoreContainer.Sound.PlayMoveSound();
 
         if (!IsExitingState)
         {

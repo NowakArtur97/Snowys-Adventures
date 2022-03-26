@@ -43,6 +43,14 @@ public class CoreContainer : MonoBehaviour
         private set => _collisionSenses = value;
     }
 
+    private Sound _sound;
+
+    public Sound Sound
+    {
+        get => GenericUtil<Sound>.GetOrDefault(_sound, transform.parent.name);
+        private set => _sound = value;
+    }
+
     private void Awake()
     {
         Animation = GetComponentInChildren<Animation>();
@@ -50,5 +58,6 @@ public class CoreContainer : MonoBehaviour
         Input = GetComponentInChildren<Input>();
         Movement = GetComponentInChildren<Movement>();
         CollisionSenses = GetComponentInChildren<CollisionSenses>();
+        Sound = GetComponentInChildren<Sound>();
     }
 }

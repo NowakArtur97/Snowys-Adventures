@@ -12,6 +12,8 @@ public class LandState : GroundedState
         Player.CoreContainer.Movement.SetVelocityZero();
 
         CameraShakeInstance.Shake();
+
+        Player.CoreContainer.Sound.PlayLandSound();
     }
 
     public override void LogicUpdate()
