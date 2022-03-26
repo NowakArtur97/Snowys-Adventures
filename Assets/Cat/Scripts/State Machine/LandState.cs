@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using static CameraShake;
 
 public class LandState : GroundedState
 {
@@ -9,6 +10,8 @@ public class LandState : GroundedState
         base.Enter();
 
         Player.CoreContainer.Movement.SetVelocityZero();
+
+        CameraShakeInstance.Shake();
     }
 
     public override void LogicUpdate()
