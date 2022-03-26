@@ -472,6 +472,7 @@ MonoBehaviour:
   _turnOffSound: {fileID: 8300000, guid: 0624d863771e08b41b4d7fac58234acd, type: 3}
   _soundMinPitch: 0.8
   _soundMaxPitch: 1
+  _soundSpatialBlend: 0.75
   _objectsToInteract: []
   _wireEnd: {fileID: 4118856257822799460}
   _electricalContactPostion: {fileID: 4118856259023355149}
@@ -566,7 +567,7 @@ MonoBehaviour:
   - {x: 0.42381382, y: -1.9246371, z: 0}
   m_ShapePathHash: 1561336597
   m_Mesh: {fileID: 0}
-  m_InstanceId: 47360
+  m_InstanceId: 59046
 --- !u!82 &814753879624783328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -576,7 +577,7 @@ AudioSource:
   m_GameObject: {fileID: 4118856258170766087}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1556520190114774464, guid: 71b24f6466f2dfd43827ff0dc1551e3f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1

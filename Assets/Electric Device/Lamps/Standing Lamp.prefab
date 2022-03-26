@@ -875,6 +875,7 @@ MonoBehaviour:
   _turnOffSound: {fileID: 8300000, guid: 0624d863771e08b41b4d7fac58234acd, type: 3}
   _soundMinPitch: 0.8
   _soundMaxPitch: 1
+  _soundSpatialBlend: 0.75
   _objectsToInteract: []
   _wireEnd: {fileID: 6701760303581670511}
   _electricalContactPostion: {fileID: 6701760304060612173}
@@ -984,8 +985,8 @@ AudioSource:
   m_GameObject: {fileID: 6701760304684781669}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0624d863771e08b41b4d7fac58234acd, type: 3}
+  OutputAudioMixerGroup: {fileID: -1556520190114774464, guid: 71b24f6466f2dfd43827ff0dc1551e3f, type: 2}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

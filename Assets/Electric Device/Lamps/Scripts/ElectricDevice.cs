@@ -10,6 +10,7 @@ public abstract class ElectricDevice : MonoBehaviour
     [SerializeField] private AudioClip _turnOffSound;
     [SerializeField] private float _soundMinPitch = 0.8f;
     [SerializeField] private float _soundMaxPitch = 1.0f;
+    [SerializeField] private float _soundSpatialBlend = 0.75f;
 
     public ElectricDeviceState CurrentState { get; private set; }
 
@@ -18,13 +19,13 @@ public abstract class ElectricDevice : MonoBehaviour
     public Action OnTurnOff;
 
     private List<LampLight> _lights;
-    private AudioSource _myAudioSource;
+    protected AudioSource MyAudioSource { get; private set; }
     private bool _canPlay;
 
     protected virtual void Awake()
     {
         _lights = GetComponentsInChildren<LampLight>().ToList();
-        _myAudioSource = GetComponent<AudioSource>();
+        MyAudioSource = GetComponent<AudioSource>();
 
         CurrentState = _startingState;
     }
@@ -69,16 +70,18 @@ public abstract class ElectricDevice : MonoBehaviour
     protected virtual void ChangeState(bool isOn)
     {
         _lights.ForEach(light => light.ChangeIntensity(isOn));
-        PlaySound();
+        PlaySound(CurrentState == ElectricDeviceState.ON ? _turnOnSound : _turnOffSound);
     }
 
-    private void PlaySound()
+    protected void PlaySound(AudioClip sound)
     {
         if (_canPlay)
         {
-            _myAudioSource.clip = CurrentState == ElectricDeviceState.ON ? _turnOnSound : _turnOffSound;
-            _myAudioSource.pitch = UnityEngine.Random.Range(_soundMinPitch, _soundMaxPitch);
-            _myAudioSource.Play();
+            MyAudioSource.clip = sound;
+            MyAudioSource.loop = false;
+            MyAudioSource.pitch = UnityEngine.Random.Range(_soundMinPitch, _soundMaxPitch);
+            MyAudioSource.spatialBlend = _soundSpatialBlend;
+            MyAudioSource.Play();
         }
         _canPlay = true;
     }

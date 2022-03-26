@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,6 +9,7 @@ public class RobotVacuumCleaner : ElectricDevice
     [SerializeField] private Transform _pointB;
     [SerializeField] private float _speed = 6.0f;
     [SerializeField] private float _timeBeforeRotating = 1.0f;
+    [SerializeField] private AudioClip _workingSound;
 
     private Animator _myAnimator;
     private bool _canRotate;
@@ -49,6 +49,12 @@ public class RobotVacuumCleaner : ElectricDevice
     protected override void ChangeState(bool isOn)
     {
         base.ChangeState(isOn);
+
+        if (isOn)
+        {
+            PlaySound(_workingSound);
+            MyAudioSource.loop = true;
+        }
 
         _myAnimator.SetBool(MOVE_ANIMATION_BOOL_NAME, isOn);
     }
