@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -53,6 +52,10 @@ public class Input : MonoBehaviour
 
     public void DisableMovemnt()
     {
+        MovementInput = Vector2.zero;
+        JumpInput = false;
+        InteractInput = false;
+
         _canMove = false;
         _canJump = false;
     }

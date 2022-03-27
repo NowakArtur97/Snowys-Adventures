@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-5339117147995898102
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 391066aa15cfe8343915cee75f75e99d
+  m_EffectName: Attenuation
+  m_MixLevel: 00313558ba24c9940b810bd16741ff0d
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!243 &-1556520190114774464
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -15,6 +29,25 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: -128787712351585029}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &-1358115742021076806
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Cutscene Sound
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 20b885150dc0eb14a8858ffba9a00f95
+  m_Children: []
+  m_Volume: 854bf500083501d45a82eefb305b8b64
+  m_Pitch: bfddbe8f35eb9204599ef1c66fa2a336
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -5339117147995898102}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -62,12 +95,15 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: b5f3d1e162261c749a11c6eb597efb8a
+    name: soundsVolume
   m_AudioMixerGroupViews:
   - guids:
     - 2bb8173bca7ab84429fcb3bbc5305330
     - dad89672b47abc84ca6cdfc9060d3eb8
     - 2df6e0907c2e3044b97546ac69860cca
+    - 20b885150dc0eb14a8858ffba9a00f95
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -83,6 +119,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 7908906843873771370}
   - {fileID: -1556520190114774464}
+  - {fileID: -1358115742021076806}
   m_Volume: 955435e4b6557d9469c950e763eefb65
   m_Pitch: 38f567270151b9c4bbeba4d3f34a5497
   m_Send: 00000000000000000000000000000000
@@ -115,7 +152,8 @@ AudioMixerSnapshotController:
   m_Name: Snapshot
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 0a35e6a011707f249a77450cd64f7197
-  m_FloatValues: {}
+  m_FloatValues:
+    b5f3d1e162261c749a11c6eb597efb8a: -0.002441883
   m_TransitionOverrides: {}
 --- !u!243 &7908906843873771370
 AudioMixerGroupController:

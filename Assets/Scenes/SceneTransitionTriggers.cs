@@ -7,14 +7,13 @@ public class SceneTransitionTriggers : MonoBehaviour
     private readonly float MUTED_VOLUME = -80.0f;
 
     [SerializeField] private AudioMixer _audioMixer;
+    [SerializeField] private float _defaultSoundVolume = 0.0f;
 
     private Input _input;
-    private float _defaultSoundVolume;
 
     private void Start()
     {
         _input = FindObjectOfType<Input>();
-        _audioMixer.GetFloat(SOUNDS_VOLUME_VARIABLE, out _defaultSoundVolume);
         _audioMixer.SetFloat(SOUNDS_VOLUME_VARIABLE, MUTED_VOLUME);
     }
 
