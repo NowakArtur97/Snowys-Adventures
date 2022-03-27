@@ -11,6 +11,8 @@ public class ScaredState : State
         base.Enter();
 
         Player.CoreContainer.Movement.SetVelocityZero();
+
+        Player.CoreContainer.Sound.PlayScaredSound();
     }
 
     public override void LogicUpdate()

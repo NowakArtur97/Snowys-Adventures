@@ -48,6 +48,7 @@ MonoBehaviour:
   _moveSound: {fileID: 8300000, guid: 1a05e673c8cfb8d4282bacc89f0cc3ea, type: 3}
   _landSound: {fileID: 8300000, guid: b65c339342d767c4881058720e13d917, type: 3}
   _jumpSound: {fileID: 8300000, guid: c1a085b559a7b4d42aacac1532795495, type: 3}
+  _scaredSound: {fileID: 8300000, guid: ff46b525b1238b84fb64f73c934c27ba, type: 3}
   _soundMinPitch: 0.8
   _soundMaxPitch: 0.8
 --- !u!82 &703167189
