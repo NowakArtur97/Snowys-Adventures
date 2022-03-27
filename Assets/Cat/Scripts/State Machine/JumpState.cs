@@ -12,6 +12,8 @@ public class JumpState : AbilityState
 
         Player.CoreContainer.Animation.SetYVelocityVariable(Player.CoreContainer.Movement.CurrentVelocity.y);
 
+        Player.CoreContainer.Sound.PlayJumpSound();
+
         IsAbilityFinished = true;
     }
 }
