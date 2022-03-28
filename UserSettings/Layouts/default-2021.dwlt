@@ -43,7 +43,7 @@ MonoBehaviour:
     width: 1920
     height: 998
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 221}
   m_MaxSize: {x: 4000, y: 4021}
   vertical: 0
-  controlID: 103
+  controlID: 27
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 92
+  controlID: 55
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 90
+  controlID: 53
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 91
+  controlID: 54
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 132
+  controlID: 116
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -366,8 +366,8 @@ MonoBehaviour:
     y: 0
     width: 952
     height: 308
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 24}
@@ -397,8 +397,8 @@ MonoBehaviour:
     y: 0
     width: 588
     height: 948
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 27}
   m_Panes:
   - {fileID: 27}
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_SaveData: []
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7c330000
+    m_SelectedIDs: 
     m_LastClickedID: 13180
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
@@ -885,7 +885,7 @@ MonoBehaviour:
       width: 2077.7556
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.92407405
+  m_defaultScale: 0.9435185
   m_LastWindowPixelSize: {x: 1920, y: 1019}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -925,7 +925,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 0298fdff4098fdffd0a6fdff4cacfdff66acfdfff0c4fdffaecafdff4e10feff5c19feff9c1afeffaa1dfefff64dfeff8251feffbc55feff965dfeffbc61feffa665feff406efeff9871feffe675feff2683feff5884feff3089feff94b8feffa0b8feffd6b9fefff84affff9e4bffffa64cffff285effff305fffff706fffff7c6fffff0e71ffff7a78ffffa088ffff568bffffbc8dffffc090ffffd2f8ffffdef8ffff8cfaffffe26f0000e66f0000c4bd00008ece00009ace000032cf00006ecf0000f6d00000fed0000004d1000010d10000c0d100008a0a0100200b0100a21b01003a1c0100781c0100ae2101003a220100882a0100322b0100ac2c0100c23d0100e43e0100023f01008e3f0100144e0100344e0100fc580100165901000861010024610100
+      m_ExpandedIDs: 9af4ffff50f5ffffd0f5ffffc8faffffa2760000a6760000c0760000d0760000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1196,9 +1196,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.0018462, y: -1.4808335, z: -0.021470666}
+    m_Target: {x: 0.21342926, y: -4.606518, z: -0.011263391}
     speed: 2
-    m_Value: {x: -1.0018462, y: -1.4808335, z: -0.021470666}
+    m_Value: {x: 0.21342926, y: -4.606518, z: -0.011263391}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1249,9 +1249,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.6286087
+    m_Target: 2.212621
     speed: 2
-    m_Value: 7.6286087
+    m_Value: 2.212621
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1317,22 +1317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Levels
+    - Assets/Rooms/Prefabs/Decorations
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes/Levels
+  - Assets/Rooms/Prefabs/Decorations
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Unity\Projects\Snowys-Adventures
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 37}
-    m_SelectedIDs: 40780000
-    m_LastClickedID: 30784
-    m_ExpandedIDs: 00000000e0750000e2750000e4750000e6750000e8750000ea7500000876000012760000
+    scrollPos: {x: 0, y: 157}
+    m_SelectedIDs: 7a770000
+    m_LastClickedID: 30586
+    m_ExpandedIDs: 00000000aa750000ac750000ae750000b0750000b2750000b4750000b87500005276000056760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1360,7 +1360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0750000e2750000e4750000e6750000e8750000ea750000
+    m_ExpandedIDs: 00000000aa750000ac750000ae750000b0750000b2750000b4750000b6750000b8750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1387,22 +1387,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300000c5f0000265f0000be280000106300001e6e00002e3300009e6e000028330000f27100005271000020700000f0b30000687000001c6f00001eca0000906f000008c20000b4340000463400007c330000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300000c5f0000265f0000be280000106300001e6e00002e3300009e6e000028330000f27100005271000020700000f0b30000687000001c6f00001eca0000906f000008c20000b4340000463400007c330000ea770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Levels
-      m_OriginalName: Levels
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 30784
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 14}
     m_CreateAssetUtility:
