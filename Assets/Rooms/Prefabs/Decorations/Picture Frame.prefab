@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3452263694215638633}
   - component: {fileID: 3452263694215638632}
   - component: {fileID: 3452263694215638635}
-  m_Layer: 8
+  m_Layer: 20
   m_Name: Picture Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}

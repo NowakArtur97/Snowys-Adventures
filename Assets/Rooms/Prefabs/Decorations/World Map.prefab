@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8766970616846230744}
   - component: {fileID: 8766970616846230745}
   - component: {fileID: 8766970616846230750}
-  m_Layer: 16
+  m_Layer: 20
   m_Name: World Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
