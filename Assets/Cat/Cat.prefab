@@ -261,13 +261,13 @@ MonoBehaviour:
   m_SelfShadows: 0
   m_ApplyToSortingLayers: 00000000cb11e7d9c52815a013853913
   m_ShapePath:
-  - {x: -0.08823824, y: -0.40281105, z: -2.8170371e-14}
-  - {x: -0.07800341, y: 0.06358266, z: -8.467308e-14}
-  - {x: 0.40518427, y: 0.052713394, z: 1.2430717e-15}
-  - {x: 0.4, y: -0.4, z: -1.1672283e-15}
-  m_ShapePathHash: 1253854770
+  - {x: -0.17523837, y: -0.7227466, z: -2.8170371e-14}
+  - {x: -0.1752384, y: -0.5369978, z: -8.467308e-14}
+  - {x: 0.3298388, y: -0.4159639, z: 1.2430717e-15}
+  - {x: 0.32983875, y: -0.7227466, z: -1.1672283e-15}
+  m_ShapePathHash: -1484804077
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1890
+  m_InstanceId: -349414
 --- !u!1 &8221785221355958415
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,7 +795,7 @@ SpriteRenderer:
   m_SortingLayerID: 322536723
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1950027813, guid: 5446282215df61c4a9c8ea4856206b7b, type: 3}
+  m_Sprite: {fileID: -1075438526, guid: 5446282215df61c4a9c8ea4856206b7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
