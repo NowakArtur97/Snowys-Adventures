@@ -17,16 +17,13 @@ public class LampLight : MonoBehaviour
 
     private void Update()
     {
-        if (_timeElapsed < _lerpDuration)
+        if (_isOn)
         {
-            if (_isOn)
-            {
-                LerpIntensity(_intensityOn);
-            }
-            else
-            {
-                LerpIntensity(_intensityOff);
-            }
+            LerpIntensity(_intensityOn);
+        }
+        else
+        {
+            LerpIntensity(_intensityOff);
         }
     }
 
@@ -40,7 +37,7 @@ public class LampLight : MonoBehaviour
     {
         _isOn = isOn;
         _currentIntensity = isOn ? _intensityOff : _intensityOn;
-        _lerpDuration = Time.deltaTime + _timeToChangeIntensity;
         _timeElapsed = Time.deltaTime;
+        _lerpDuration = _timeElapsed + _timeToChangeIntensity;
     }
 }
