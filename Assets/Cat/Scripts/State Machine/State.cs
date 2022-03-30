@@ -34,7 +34,7 @@ public class State
 
     public virtual void LogicUpdate()
     {
-        if (Player.IsScared && Player.StateMachine.CurrentState != Player.ScaredState)
+        if ((Player.IsScared || Player.IsTerrified) && Player.StateMachine.CurrentState != Player.ScaredState)
         {
             Player.StateMachine.ChangeState(Player.ScaredState);
         }

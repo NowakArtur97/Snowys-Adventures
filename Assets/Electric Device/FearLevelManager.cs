@@ -4,17 +4,31 @@ using UnityEngine.UI;
 
 public class FearLevelManager : MonoBehaviour
 {
-    [SerializeField] private float _fearStep = 0.05f;
+    private readonly string SCARED_SCROLLBAR_GAME_OBJECT_NAME = "Scared Scrollbar";
+    private readonly string SCARED_SCROLLBAR_HANDLE_GAME_OBJECT_NAME = "Handle";
+
+    [SerializeField] private float _fearStep = 0.25f;
     [SerializeField] private float _timeBetweenFearSteps = 1.0f;
-    [SerializeField] private Scrollbar _fearLevelScrollbar;
-    [SerializeField] private GameObject _fearLevelScrollbarHandle;
+    [SerializeField] private float _startingFearLevel = 0.0f;
+
+    private Scrollbar _fearLevelScrollbar;
+    private GameObject _fearLevelScrollbarHandle;
 
     private float _levelOfFear;
     private int _numberOfLights;
     private bool _isOutsideTheLight;
     private bool _isInCoroutine;
 
-    private void Awake() => _fearLevelScrollbarHandle.SetActive(false);
+    private void Awake()
+    {
+        _fearLevelScrollbar = GameObject.Find(SCARED_SCROLLBAR_GAME_OBJECT_NAME).GetComponent<Scrollbar>();
+        _fearLevelScrollbarHandle = GameObject.Find(SCARED_SCROLLBAR_HANDLE_GAME_OBJECT_NAME);
+
+        _levelOfFear = _startingFearLevel;
+        _fearLevelScrollbar.size = _levelOfFear;
+        _fearLevelScrollbarHandle.SetActive(false);
+
+    }
 
     private void Start()
     {
