@@ -153,9 +153,13 @@ MonoBehaviour:
   m_ApplyToSortingLayers: cb11e7d9c52815a01385391301048ec9
   m_ShapePath:
   - {x: -1.5, y: -0.6875, z: 0}
-  - {x: -1.5, y: 0.6875, z: 0}
-  - {x: 1.5, y: 0.6875, z: 0}
+  - {x: -1.5, y: 0.6235223, z: 0}
+  - {x: -1.4389346, y: 0.6235223, z: 0}
+  - {x: -1.438935, y: 0.687366, z: 0}
+  - {x: 1.436759, y: 0.6875, z: 0}
+  - {x: 1.4367595, y: 0.6235223, z: 0}
+  - {x: 1.5005058, y: 0.6235223, z: 0}
   - {x: 1.5, y: -0.6875, z: 0}
-  m_ShapePathHash: 0
+  m_ShapePathHash: -992471660
   m_Mesh: {fileID: 0}
-  m_InstanceId: -2734
+  m_InstanceId: -2916
