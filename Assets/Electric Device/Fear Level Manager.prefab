@@ -45,5 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fearStep: 0.25
-  _timeBetweenFearSteps: 1
-  _startingFearLevel: 0
+  _timeBetweenFearSteps: 0.5

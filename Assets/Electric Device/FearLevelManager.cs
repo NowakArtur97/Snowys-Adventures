@@ -9,7 +9,6 @@ public class FearLevelManager : MonoBehaviour
 
     [SerializeField] private float _fearStep = 0.25f;
     [SerializeField] private float _timeBetweenFearSteps = 1.0f;
-    [SerializeField] private float _startingFearLevel = 0.0f;
 
     private Scrollbar _fearLevelScrollbar;
     private GameObject _fearLevelScrollbarHandle;
@@ -21,13 +20,17 @@ public class FearLevelManager : MonoBehaviour
 
     private void Awake()
     {
-        _fearLevelScrollbar = GameObject.Find(SCARED_SCROLLBAR_GAME_OBJECT_NAME).GetComponent<Scrollbar>();
+        _fearLevelScrollbar = GameObject.Find(SCARED_SCROLLBAR_GAME_OBJECT_NAME)?.GetComponent<Scrollbar>();
         _fearLevelScrollbarHandle = GameObject.Find(SCARED_SCROLLBAR_HANDLE_GAME_OBJECT_NAME);
 
-        _levelOfFear = _startingFearLevel;
-        _fearLevelScrollbar.size = _levelOfFear;
-        _fearLevelScrollbarHandle.SetActive(false);
-
+        if (_fearLevelScrollbar)
+        {
+            _fearLevelScrollbar.size = _levelOfFear;
+        }
+        if (_fearLevelScrollbarHandle)
+        {
+            _fearLevelScrollbarHandle.SetActive(false);
+        }
     }
 
     private void Start()
@@ -78,10 +81,7 @@ public class FearLevelManager : MonoBehaviour
 
     public void IncreaseFearLevel()
     {
-        if (!_fearLevelScrollbarHandle.activeInHierarchy)
-        {
-            _fearLevelScrollbarHandle.SetActive(true);
-        }
+        SetupObjects();
 
         _levelOfFear += _fearStep;
         _fearLevelScrollbar.size = _levelOfFear;
@@ -95,4 +95,20 @@ public class FearLevelManager : MonoBehaviour
     private bool IsPlayerInDarkness() => _numberOfLights == 0;
 
     private bool IsFearLevelMax() => _fearLevelScrollbar.size >= 1;
+
+    private void SetupObjects()
+    {
+        if (_fearLevelScrollbarHandle == null)
+        {
+            _fearLevelScrollbarHandle = GameObject.Find(SCARED_SCROLLBAR_HANDLE_GAME_OBJECT_NAME);
+        }
+        if (!_fearLevelScrollbarHandle.activeInHierarchy)
+        {
+            _fearLevelScrollbarHandle.SetActive(true);
+        }
+        if (_fearLevelScrollbar == null)
+        {
+            _fearLevelScrollbar = GameObject.Find(SCARED_SCROLLBAR_GAME_OBJECT_NAME).GetComponent<Scrollbar>();
+        }
+    }
 }
