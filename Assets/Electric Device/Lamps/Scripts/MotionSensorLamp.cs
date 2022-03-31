@@ -37,7 +37,10 @@ public class MotionSensorLamp : Lamp
 
     private IEnumerator LightDelayCoroutine()
     {
-        TurnOn();
+        if (CurrentState != ElectricDeviceState.ON)
+        {
+            TurnOn();
+        }
 
         yield return new WaitForSeconds(_ligtingTime);
 
