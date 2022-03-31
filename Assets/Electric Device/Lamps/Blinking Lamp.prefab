@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _intensityOn: 0.7
   _intensityOff: 0
+  _timeToChangeIntensity: 0.5
 --- !u!114 &1739524083957790558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +114,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 2
-  m_PointLightOuterRadius: 3
+  m_PointLightInnerRadius: 1.5
+  m_PointLightOuterRadius: 2
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _intensityOn: 0.7
   _intensityOff: 0.1
+  _timeToChangeIntensity: 0.5
 --- !u!114 &1739524084421892387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,15 +301,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55e621470f3765e4684fb4c101e6b1b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingState: 0
+  _startingState: 1
   _turnOnSound: {fileID: 8300000, guid: 52db3bd676e3c3440aa70928605c74a6, type: 3}
   _turnOffSound: {fileID: 8300000, guid: 52db3bd676e3c3440aa70928605c74a6, type: 3}
   _soundMinPitch: 0.8
   _soundMaxPitch: 1
   _soundSpatialBlend: 0.75
   _objectsToInteract: []
-  _ligtingTime: 1.5
-  _restTime: 1.5
+  _ligtingTime: 2
+  _restTime: 2
 --- !u!212 &1739524084728613088
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -514,6 +516,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.38144732}
+  m_Offset: {x: -0.024194717, y: 0.06011617}
   serializedVersion: 2
-  m_Radius: 2.467556
+  m_Radius: 1.670952
