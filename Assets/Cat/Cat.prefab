@@ -267,7 +267,7 @@ MonoBehaviour:
   - {x: 0.32983875, y: -0.7227466, z: -1.1672283e-15}
   m_ShapePathHash: -1484804077
   m_Mesh: {fileID: 0}
-  m_InstanceId: -349414
+  m_InstanceId: 41626
 --- !u!1 &8221785221355958415
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +534,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b800881f-fb89-4370-a611-1d96d66548da
     m_ActionName: Gameplay action map/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8221785221637465270}
+        m_TargetAssemblyTypeName: Input, Assembly-CSharp
+        m_MethodName: OnRestartLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 868b26c9-0c68-4c7c-96a1-a9737445b8f2
+    m_ActionName: Gameplay action map/Restart[/Keyboard/r]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay action map

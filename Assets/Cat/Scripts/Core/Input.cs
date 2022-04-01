@@ -9,6 +9,7 @@ public class Input : MonoBehaviour
     public Vector2 MovementInput { get; private set; }
     public bool JumpInput { get; private set; }
     public bool InteractInput { get; private set; }
+    public bool RestartLevelInput { get; private set; }
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -39,6 +40,18 @@ public class Input : MonoBehaviour
         else if (context.canceled)
         {
             InteractInput = false;
+        }
+    }
+
+    public void OnRestartLevel(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            RestartLevelInput = true;
+        }
+        else if (context.canceled)
+        {
+            RestartLevelInput = false;
         }
     }
 

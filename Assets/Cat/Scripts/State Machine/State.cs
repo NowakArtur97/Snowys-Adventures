@@ -38,6 +38,11 @@ public class State
         {
             Player.StateMachine.ChangeState(Player.ScaredState);
         }
+
+        if (Player.CoreContainer.Input.RestartLevelInput)
+        {
+            LevelManager.ReloadScene();
+        }
     }
 
     public virtual void PhysicsUpdate() => DoChecks();
