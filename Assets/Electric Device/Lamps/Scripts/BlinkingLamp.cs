@@ -5,12 +5,16 @@ public class BlinkingLamp : Lamp
 {
     [SerializeField] private float _ligtingTime = 1.5f;
     [SerializeField] private float _restTime = 1.5f;
+    [SerializeField] private float _startingOffsetTime = 0.0f;
 
     private bool _isInCoroutine;
+    private bool _isAfterStartingOffset;
+
+    private void Start() => StartCoroutine(StartingOffsetCoroutine());
 
     private void Update()
     {
-        if (!_isInCoroutine)
+        if (_isAfterStartingOffset && !_isInCoroutine)
         {
             if (CurrentState == ElectricDeviceState.ON)
             {
@@ -51,5 +55,12 @@ public class BlinkingLamp : Lamp
         yield return new WaitForSeconds(_ligtingTime);
 
         _isInCoroutine = false;
+    }
+
+    private IEnumerator StartingOffsetCoroutine()
+    {
+        yield return new WaitForSeconds(_startingOffsetTime);
+
+        _isAfterStartingOffset = true;
     }
 }
