@@ -33,11 +33,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/09_KnockingBoxFromTheWardrobe.unity
     guid: 65d7e1dda61f67d4cbe45499be5af057
   - enabled: 1
-    path: Assets/Scenes/Levels/10_StopingVacuumCleanerUnderMotionSensorLamp.unity
-    guid: 555eac187106ca64abc8c6ce3ec9d499
-  - enabled: 1
-    path: Assets/Scenes/Levels/11_KnockingBoxFromTheShelves.unity
+    path: Assets/Scenes/Levels/10_KnockingBoxFromTheShelves.unity
     guid: 3118ea3ae837ee44a80af9822c7146bc
+  - enabled: 1
+    path: Assets/Scenes/Levels/11_StopingVacuumCleanerUnderMotionSensorLamp.unity
+    guid: 555eac187106ca64abc8c6ce3ec9d499
   - enabled: 1
     path: Assets/Scenes/Levels/12_Outro.unity
     guid: d244296fcb29b164590989f05ba655de
